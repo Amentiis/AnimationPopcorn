@@ -79,6 +79,14 @@ function reset() {
     inputJoueur2.value = ""
     inputJoueur3.value = ""
     inputJoueur4.value = ""
+    Joueur1.innerHTML = "";
+    Joueur2.innerHTML = "";
+    Joueur3.innerHTML = "";
+    Joueur4.innerHTML = "";
+    pointJoueur1.innerHTML = ""; 
+    pointJoueur2.innerHTML = ""; 
+    pointJoueur3.innerHTML = ""; 
+    pointJoueur4.innerHTML = ""; 
     containerclassement.classList.remove("block");
     redcontainer.classList.remove("block");
 };
