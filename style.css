@@ -10,6 +10,14 @@ body {
   font-family: "Roboto";
 }
 
+.block {
+  display: block !important;
+}
+
+.none {
+  display: none !important;
+}
+
 h1, h2, p {
   margin: 0;
 }
@@ -28,6 +36,7 @@ h1, h2, p {
 }
 
 .red_container {
+  display: none;
   align-items: center;
   width: 500px;
   height: 500px;
@@ -87,6 +96,7 @@ h1, h2, p {
 }
 
 .container_classement {
+  display: none;
   position: absolute;
   width: 500px;
   height: 500px;
@@ -97,6 +107,49 @@ h1, h2, p {
   z-index: 1000;
   background-color: white;
   transform: translatey(-650px);
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+}
+.formulaire input {
+  height: 50px;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+}
+.formulaire .left {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+.formulaire .right {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20%;
+  right: 20%;
+}
+
+.bouton {
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+  bottom: 0;
+  right: 0;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
 }
 
 .blanc {

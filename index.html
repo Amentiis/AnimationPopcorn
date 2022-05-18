@@ -8,9 +8,11 @@
     <title>Score popcorn</title>
 </head>
 <body>
+
+    
     
     <div class="container">
-        <div class="container_classement">
+        <div id="container_classement" class="container_classement">
             <div class="blanc">
                 <div class="red2">
                     <h1>Classement</h1>
@@ -18,41 +20,41 @@
                  <ol>
                     <li>
                         <div class="player">
-                            <p>Joueur 1</p>
+                            <p id="Joueur1"></p>
                         </div>
                         <div class="point">
-                            20 pts
+                            <span id="pointJoueur1"></span> pts
                         </div>
                     </li>
                     <li>
                         <div class="player">
-                            <p>Joueur 2</p>
+                            <p id="Joueur2"></p>
+                        </div>
+                        <div  class="point">
+                            <span id="pointJoueur2"></span> pts
+                        </div>
+                    </li>
+                    <li>
+                        <div  class="player">
+                            <p id="Joueur3" ></p>
                         </div>
                         <div class="point">
-                            20 pts
+                            <span id="pointJoueur3"></span> pts
                         </div>
                     </li>
                     <li>
                         <div class="player">
-                            <p>Joueur 3</p>
+                            <p id="Joueur4" ></p>
                         </div>
                         <div class="point">
-                            20 pts
-                        </div>
-                    </li>
-                    <li>
-                        <div class="player">
-                            <p>Joueur 4</p>
-                        </div>
-                        <div class="point">
-                            20 pts
+                            <span id="pointJoueur4"></span> pts
                         </div>
                     </li>
                 </ol> 
             </div>
         </div>
        
-        <div class="red_container">
+        <div id="red_container" class="red_container">
             <div class="red1">
                 <div class="text">
                      <div class="redscare">
@@ -63,13 +65,40 @@
                      <div class="redscare">
                     </div>
                 </div>
-            </div>
+             </div>
+        </div>
 
        
-        
 
-    </div>
-    
-    
+            
+           
+        </div>
+        <section class="input">
+            <div class="top">
+                <div class="formulaire">
+                    <div class="left"t>
+                        <input type="text" id="inputJoueur1" placeholder="Joueur 1" />
+                        <input type="text" id="inputJoueur2" placeholder="Joueur 2" />
+                        <input type="text" id="inputJoueur3" placeholder="Joueur 3" />
+                        <input type="text" id="inputJoueur4" placeholder="Joueur 4" />
+                    </div>
+                    <div class="right">
+                        <input type="text" id="inputPoint1" placeholder="Point" />
+                        <input type="text" id="inputPoint2" placeholder="Point" />
+                        <input type="text" id="inputPoint3" placeholder="Point" />
+                        <input type="text" id="inputPoint4" placeholder="Point" />
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <button id="lancer" class="bouton">Lancer</button>
+                <button id="reset" class="bouton">Reset</button>
+            </div>
+
+        </section>
+        
+    <script type="text/javascript" src="index.js"></script>
 </body>
+
+
 </html>
