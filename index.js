@@ -59,15 +59,27 @@
 
 const buttonlancer= document.getElementById("lancer");
 const buttonreset = document.getElementById("reset");
+const buttounfermer = document.getElementById("fermer")
 const containerclassement = document.getElementById("container_classement");
 const redcontainer = document.getElementById("red_container");
+const red = document.getElementById("red");
+const info = document.getElementById("info");
 
 
 buttonlancer.addEventListener("click", lancer);
 buttonreset.addEventListener("click", reset);
+buttounfermer.addEventListener("click", fermer);
 function lancer() {
     containerclassement.classList.add("block");
     redcontainer.classList.add("block");
+    containerclassement.classList.remove("close");
+    redcontainer.classList.remove("close");
+    red.classList.remove("close2");
+    buttounfermer.setAttribute("disabled","")
+    info.innerText = "ne peut être utilisé pendant lancement";
+    setTimeout(enablebtnfermer, 5000); 
+   
+
 };
 
 function reset() {
@@ -89,9 +101,47 @@ function reset() {
     pointJoueur4.innerHTML = ""; 
     containerclassement.classList.remove("block");
     redcontainer.classList.remove("block");
+    containerclassement.classList.remove("close");
+    redcontainer.classList.remove("close");
+    red.classList.remove("close2");
+    buttonlancer.removeAttribute("disabled","")
+    buttounfermer.addAttribute("disabled","")
 };
 
 
+function fermer(){
+    containerclassement.classList.add("close");
+    redcontainer.classList.add("close");
+    red.classList.add("close2");
+    buttonlancer.setAttribute("disabled","")
+    buttounfermer.setAttribute("disabled","")
+    setTimeout(anim, 3000); 
+    info.classList.remove("none");
+    setTimeout(enablebtnlancer, 3000);
+
+}
+
+function enablebtnlancer(){
+    buttonlancer.removeAttribute("disabled","")
+}
+
+function enablebtnfermer(){
+    buttounfermer.removeAttribute("disabled","")
+    info.classList.add("none");
+    info.innerText = "ne peut être utilisé avant lancement";
+}
+
+function anim(){
+    containerclassement.classList.remove("block");
+    redcontainer.classList.remove("block");
+    
+    
+}
+
+function minreset(){
+    containerclassement.classList.remove("block");
+    redcontainer.classList.remove("block");
+}
     
    
     

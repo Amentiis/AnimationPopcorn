@@ -14,10 +14,6 @@ body {
   display: block !important;
 }
 
-.none {
-  display: none !important;
-}
-
 h1, h2, p {
   margin: 0;
 }
@@ -139,6 +135,17 @@ h1, h2, p {
   right: 20%;
 }
 
+.close {
+  width: 0px !important;
+  height: 0px !important;
+  transition: all 2000ms !important;
+}
+
+.close2 {
+  -webkit-animation: redinblanc2 1.5s both !important;
+          animation: redinblanc2 1.5s both !important;
+}
+
 .bouton {
   width: 500px;
   height: 50px;
@@ -233,6 +240,38 @@ h1, h2, p {
           animation-delay: 4s;
 }
 
+button[disabled=disabled], button:disabled {
+  background-color: #FC4647;
+  border: 0;
+  color: white;
+  transition: all 1000ms;
+}
+
+.bottom {
+  position: relative;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 300px;
+  height: 50px;
+  background-color: white;
+  border: 0;
+  top: 50px;
+  left: 525px;
+  border-radius: 15px;
+  opacity: 0.5;
+  transition: all 1500ms;
+}
+
+.none {
+  opacity: 0;
+  transition: 1000ms all;
+}
+
 @-webkit-keyframes margin {
   0% {
     margin-bottom: 0;
@@ -322,6 +361,22 @@ h1, h2, p {
   }
   100% {
     height: 100px;
+  }
+}
+@-webkit-keyframes redinblanc2 {
+  0% {
+    height: 100px;
+  }
+  100% {
+    height: 0;
+  }
+}
+@keyframes redinblanc2 {
+  0% {
+    height: 100px;
+  }
+  100% {
+    height: 0;
   }
 }
 @-webkit-keyframes counter {
