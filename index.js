@@ -76,6 +76,7 @@ function lancer() {
     redcontainer.classList.remove("close");
     red.classList.remove("close2");
     buttounfermer.setAttribute("disabled","")
+    buttonlancer.setAttribute("disabled","")
     info.innerText = "ne peut être utilisé pendant lancement";
     setTimeout(enablebtnfermer, 5000); 
    
@@ -115,9 +116,11 @@ function fermer(){
     red.classList.add("close2");
     buttonlancer.setAttribute("disabled","")
     buttounfermer.setAttribute("disabled","")
+   
     setTimeout(anim, 3000); 
     info.classList.remove("none");
     setTimeout(enablebtnlancer, 3000);
+    
 
 }
 
@@ -144,5 +147,3 @@ function minreset(){
 }
     
    
-    
-
